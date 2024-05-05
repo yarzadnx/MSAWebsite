@@ -1,33 +1,9 @@
-import React, { useState } from "react";
 import NavBar from "../components/Navbar/NavBar";
 import Footer from "../components/Footer";
 import { useDocTitle } from "../components/CustomHook";
-import Notiflix from "notiflix";
 
 const Contact = () => {
   useDocTitle("JMU MSA");
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-
-  const clearInput = () => {
-    setName("");
-    setEmail("");
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    // Disabling the submit button and showing loading state
-    e.target.elements.submitBtn.disabled = true;
-    e.target.elements.submitBtn.innerHTML = "Loading...";
-
-    // Simulate sending email (replace with actual code to send email)
-    setTimeout(() => {
-      e.target.elements.submitBtn.disabled = false;
-      e.target.elements.submitBtn.innerHTML = "Send";
-      clearInput();
-      Notiflix.Notify.success("Email sent successfully!");
-    }, 2000);
-  };
 
   return (
     <>
