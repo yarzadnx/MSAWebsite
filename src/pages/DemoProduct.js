@@ -4,24 +4,8 @@ import Footer from "../components/Footer";
 import Notiflix from "notiflix";
 
 const DemoProduct = () => {
-  const [firstName, setFirstName] = useState("");
-  const [lastName, setLastName] = useState("");
-  const [email, setEmail] = useState("");
-  const [phone, setPhone] = useState("");
   const [message, setMessage] = useState("");
-  const [demoProducts, setDemoProducts] = useState([]);
   const [errors, setErrors] = useState([]);
-
-  const handleChange = (e) => {
-    const value = e.target.value;
-    const checked = e.target.checked;
-    errors.products = [];
-    if (checked) {
-      setDemoProducts([...demoProducts, value]);
-    } else {
-      setDemoProducts(demoProducts.filter((e) => e !== value));
-    }
-  };
 
   const clearErrors = () => {
     setErrors([]);
