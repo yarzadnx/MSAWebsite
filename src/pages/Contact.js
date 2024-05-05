@@ -16,7 +16,7 @@ const Contact = () => {
           className="container mx-auto my-8 px-4 lg:px-20"
           data-aos="zoom-in"
         >
-          <form name="contact" method="POST" netlify>
+          <form name="contact" netlify>
             <p>
               <label>
                 Your Name: <input type="text" name="name" />
