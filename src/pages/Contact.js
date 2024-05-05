@@ -3,7 +3,6 @@ import NavBar from "../components/Navbar/NavBar";
 import Footer from "../components/Footer";
 import { useDocTitle } from "../components/CustomHook";
 import Notiflix from "notiflix";
-import axios from "axios";
 
 const Contact = () => {
   useDocTitle("JMU MSA");
@@ -15,40 +14,19 @@ const Contact = () => {
     setEmail("");
   };
 
-  const sendEmail = (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
     // Disabling the submit button and showing loading state
-    document.getElementById("submitBtn").disabled = true;
-    document.getElementById("submitBtn").innerHTML = "Loading...";
+    e.target.elements.submitBtn.disabled = true;
+    e.target.elements.submitBtn.innerHTML = "Loading...";
 
-    const formData = {
-      name: name,
-      email: email,
-    };
-
-    axios
-      .post(process.env.REACT_APP_CONTACT_API, formData)
-      .then(function (response) {
-        // Re-enable the submit button and clear input fields
-        document.getElementById("submitBtn").disabled = false;
-        document.getElementById("submitBtn").innerHTML = "Subscribe!";
-        clearInput();
-        // Handle success
-        Notiflix.Report.success("Success", response.data.message, "Okay");
-      })
-      .catch(function (error) {
-        // Re-enable the submit button and show error message
-        document.getElementById("submitBtn").disabled = false;
-        document.getElementById("submitBtn").innerHTML = "Subscribe!";
-        const { response } = error;
-        if (response && response.status === 500) {
-          Notiflix.Report.failure(
-            "An error occurred",
-            response.data.message,
-            "Okay"
-          );
-        }
-      });
+    // Simulate sending email (replace with actual code to send email)
+    setTimeout(() => {
+      e.target.elements.submitBtn.disabled = false;
+      e.target.elements.submitBtn.innerHTML = "Send";
+      clearInput();
+      Notiflix.Notify.success("Email sent successfully!");
+    }, 2000);
   };
 
   return (
@@ -62,37 +40,34 @@ const Contact = () => {
           className="container mx-auto my-8 px-4 lg:px-20"
           data-aos="zoom-in"
         >
-          <form
-            name="contact"
-            method="POST"
-            data-netlify="true"
-            onSubmit={sendEmail}
-          >
-            <div className="form-example">
-              <label htmlFor="name">Enter your name: </label>
-              <input
-                type="text"
-                name="name"
-                id="name"
-                value={name}
-                onChange={(e) => setName(e.target.value)}
-                required
-              />
-            </div>
-            <div className="form-example">
-              <label htmlFor="email">Enter your email: </label>
-              <input
-                type="email"
-                name="email"
-                id="email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                required
-              />
-            </div>
-            <div className="form-example">
-              <input type="submit" id="submitBtn" value="Subscribe!" />
-            </div>
+          <form name="contact" method="POST" netlify>
+            <p>
+              <label>
+                Your Name: <input type="text" name="name" />
+              </label>
+            </p>
+            <p>
+              <label>
+                Your Email: <input type="email" name="email" />
+              </label>
+            </p>
+            <p>
+              <label>
+                Your Role:{" "}
+                <select name="role[]" multiple>
+                  <option value="leader">Leader</option>
+                  <option value="follower">Follower</option>
+                </select>
+              </label>
+            </p>
+            <p>
+              <label>
+                Message: <textarea name="message"></textarea>
+              </label>
+            </p>
+            <p>
+              <button type="submit">Send</button>
+            </p>
           </form>
         </div>
       </div>
