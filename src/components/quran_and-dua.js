@@ -15,7 +15,7 @@ const Services = () => {
               <div className="text-purple-900 mb-4">
                 <img
                   src={newImage}
-                  alt="Description of the image"
+                  alt="DuaPicture"
                   width="72"
                   height="72"
                   className="fill-current"
@@ -24,6 +24,7 @@ const Services = () => {
               <h3
                 className="text-3xl  text-purple-900 
                             font-bold"
+                Hello
               >
                 <span className="font-black">Dua of the Month</span>
               </h3>
@@ -42,7 +43,7 @@ const Services = () => {
               <div className="text-purple-900 mb-4">
                 <img
                   src={newImage2}
-                  alt="Description of the image"
+                  alt="quranPicture"
                   width="72"
                   height="72"
                   className="fill-current"
