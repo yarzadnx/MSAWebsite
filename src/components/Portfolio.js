@@ -5,7 +5,7 @@ const Portfolio = () => {
     return (
         <>
             <div className="my-4 py-4" id='portfolio'>
-                <h2 className="my-2 text-center text-3xl text-blue-900 uppercase font-bold">Products</h2>
+                <h2 className="my-2 text-center text-3xl text-purple-900 uppercase font-bold">Activities</h2>
                 <div className='flex justify-center'>
                     <div className='w-24 border-b-4 border-blue-900 mb-8'></div>
                 </div>
@@ -14,11 +14,9 @@ const Portfolio = () => {
                     <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">                            
                         <div className="bg-white transition-all ease-in-out duration-400  overflow-hidden text-gray-700 hover:scale-105 rounded-lg shadow-2xl p-3 min-h-max">
                             <div className="m-2 text-justify text-sm">
-                                <h4 className="font-semibold my-4 text-lg md:text-2xl text-center mb-4 h-12">Business Management System</h4>
+                                <h4 className="font-semibold my-4 text-lg md:text-2xl text-center mb-4 h-12">Weekly Meetings</h4>
                                 <p className="text-md font-medium leading-5 h-auto md:h-48">
-                                    Our Business Management System is a robust and easily scalable system that streamlines business operations, increase efficiency, and ultimately drive growth and profitability for your business.
-                                    With features such as employee management, finance control, and many more modules to effectively manage all aspects of a business.
-                                    All data is stored in the cloud and as such it is easily accessible from all devices and from any location.
+                                    hjhj
                                 </p>
                                 <div className="flex justify-center my-4">
                                     <Link to="/get-demo" className="text-white bg-blue-900 hover:bg-blue-800 inline-flex items-center justify-center w-full px-6 py-3 my-4 text-lg shadow-xl rounded-xl">
