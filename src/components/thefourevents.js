@@ -31,10 +31,9 @@ const Portfolio = () => {
                 </p>
                 <div className="flex justify-center my-4">
                   <Link
-                    to="/get-demo"
-                    className="text-white bg-blue-900 hover:bg-blue-800 inline-flex items-center justify-center w-full px-6 py-3 my-4 text-lg shadow-xl rounded-xl"
+                    className="text-white bg-purple-900 hover:bg-purple-800 inline-flex items-center justify-center w-full px-6 py-3 my-4 text-lg shadow-xl rounded-xl"
                   >
-                    7pm: be There{" "}
+                    7pm:Union302{" "}
                   </Link>
                 </div>
               </div>
