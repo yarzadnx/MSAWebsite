@@ -30,8 +30,12 @@ const Portfolio = () => {
                   connection.
                 </p>
                 <div className="flex justify-center my-4">
-                  <Link to="/get-demo" className="text-white bg-blue-900 hover:bg-blue-800 inline-flex items-center justify-center w-full px-6 py-3 my-4 text-lg shadow-xl rounded-xl">
-                           7pm: be There   </Link>
+                  <Link
+                    to="/get-demo"
+                    className="text-white bg-blue-900 hover:bg-blue-800 inline-flex items-center justify-center w-full px-6 py-3 my-4 text-lg shadow-xl rounded-xl"
+                  >
+                    7pm: be There{" "}
+                  </Link>
                 </div>
               </div>
             </div>
@@ -44,8 +48,8 @@ const Portfolio = () => {
                 <p className="text-md font-medium leading-5 h-auto md:h-48">
                   Once a month we hold Mixed socials with the brothers and
                   sisters, this social consit of hiking, apple picking, DC trip,
-                  etc. We also have brothers socials and sisters social.
-                   Join the group me below for more information
+                  etc. We also have brothers socials and sisters social. Join
+                  the group me below for more information
                 </p>
                 <div className="flex justify-center my-4">
                   <Link
@@ -76,20 +80,34 @@ const Portfolio = () => {
                   Donations
                 </h4>
                 <p className="text-md font-medium leading-5 h-auto md:h-48">
-                  Support our mission to promote the goals of the MSA by contributing to our fundraising campaign. Your generous
-                  donations enable us to organize events and initiatives that foster community engagement. no
-                  matter the size, makes a significant impact in advancing our
-                  shared objectives.
+                  Support our mission to promote the goals of the MSA by
+                  contributing to our fundraising campaign. Your generous
+                  donations enable us to organize events and initiatives that
+                  foster community engagement. No matter the size, every
+                  donation makes a significant impact in advancing our shared
+                  objectives.
                 </p>
                 <div className="flex justify-center my-4">
-                  <Link to="/get-demo" className="text-black bg-Green-500 hover:bg-green-500 inline-flex items-center justify-center w-full px-6 py-3 my-4 text-lg shadow-xl rounded-xl">
-                          cash App : $msajmu
-                        </Link>
+                  <a
+                    href="https://cash.app/$msajmu"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-white bg-green-500 hover:bg-green-600 inline-flex items-center justify-center w-full px-6 py-3 my-4 text-lg shadow-xl rounded-xl"
+                  >
+                    <span className="mr-2">Cash App:</span>
+                    <span className="font-bold">$msajmu</span>
+                  </a>
                 </div>
                 <div className="flex justify-center my-4">
-                  <Link to="/get-demo" className="text-black bg-Blue-500 hover:bg-blue-500 inline-flex items-center justify-center w-full px-6 py-3 my-4 text-lg shadow-xl rounded-xl">
-                          Venmo : Jmu_msa
-                        </Link>
+                  <a
+                    href="https://venmo.com/Jmu_msa"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-white bg-blue-500 hover:bg-blue-600 inline-flex items-center justify-center w-full px-6 py-3 my-4 text-lg shadow-xl rounded-xl"
+                  >
+                    <span className="mr-2">Venmo:</span>
+                    <span className="font-bold">Jmu_msa</span>
+                  </a>
                 </div>
               </div>
             </div>
