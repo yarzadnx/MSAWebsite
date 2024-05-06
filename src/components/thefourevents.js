@@ -26,15 +26,14 @@ const Portfolio = () => {
                   captivating speakers, enlightening country showcases, and
                   interactive Islamic trivia sessions. Each week, we delve into
                   topics that celebrate our culture, faith, and shared
-                  experiences, fostering a warm atmosphere of learning and
-                  connection.
+                  experiences, fostering a warm atmosphere.
                 </p>
                 <div className="flex justify-center my-4">
                   <Link
                      to="https://www.jmu.edu/union/index.shtml?jmu_redir=r_madisonunion"
                     className="text-white bg-purple-900 hover:bg-purple-800 inline-flex items-center justify-center w-full px-6 py-3 my-4 text-lg shadow-xl rounded-xl"
                   >
-                    7pm:Union302{" "}
+                    Location:Union302{" "}
                   </Link>
                 </div>
               </div>
@@ -53,22 +52,10 @@ const Portfolio = () => {
                 </p>
                 <div className="flex justify-center my-4">
                   <Link
-                    // to="/get-demo"
-                    className="text-white bg-blue-900 hover:bg-blue-800 inline-flex items-center justify-center w-full px-6 py-3 my-4 text-lg shadow-xl rounded-xl"
+                   to="/get-demo"
+                    className="text-white bg-purple-900 hover:bg-blue-800 inline-flex items-center justify-center w-full px-6 py-3 my-4 text-lg shadow-xl rounded-xl"
                   >
-                    One Love,One Msa
-                    <svg
-                      className="w-4 h-4 ml-1"
-                      xmlns="https://groupme.com/join_group/16797770/ZBprRX"
-                      viewBox="0 0 20 20"
-                      fill="currentColor"
-                    >
-                      <path
-                        fillRule="evenodd"
-                        d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
-                        clipRule="evenodd"
-                      ></path>
-                    </svg>
+                    Join:OneLove-MSA 
                   </Link>
                 </div>
               </div>
@@ -79,7 +66,7 @@ const Portfolio = () => {
                 <h4 className="font-semibold my-4 text-lg md:text-2xl text-center mb-4 h-12">
                   Donations
                 </h4>
-                <p className="text-md font-medium leading-5 h-auto md:h-48">
+                <p className="text-md font-medium leading-5 h-auto md:h-48 space-y-36">
                   Support our mission to promote the goals of the MSA by
                   contributing to our fundraising campaign. Your generous
                   donations enable us to organize events and initiatives that
@@ -126,21 +113,9 @@ const Portfolio = () => {
                 <div className="flex justify-center my-4">
                   <Link
                     // to="/get-demo"
-                    className="text-white bg-blue-900 hover:bg-blue-800 inline-flex items-center justify-center w-full px-6 py-3 my-4 text-lg shadow-xl rounded-xl"
+                    className="text-white bg- purple-900 hover:bg-purple-800 inline-flex items-center justify-center w-full px-6 py-3 my-4 text-lg shadow-xl rounded-xl"
                   >
                     Banquets
-                    <svg
-                      className="w-4 h-4 ml-1"
-                      xmlns="http://www.w3.org/2000/svg"
-                      viewBox="0 0 20 20"
-                      fill="currentColor"
-                    >
-                      <path
-                        fillRule="evenodd"
-                        d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
-                        clipRule="evenodd"
-                      ></path>
-                    </svg>
                   </Link>
                 </div>
               </div>
