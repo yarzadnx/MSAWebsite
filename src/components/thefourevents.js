@@ -52,7 +52,7 @@ const Portfolio = () => {
                 </p>
                 <div className="flex justify-center my-4">
                   <Link
-                    to="/get-demo"
+                    // to="/get-demo"
                     className="text-white bg-blue-900 hover:bg-blue-800 inline-flex items-center justify-center w-full px-6 py-3 my-4 text-lg shadow-xl rounded-xl"
                   >
                     One Love,One Msa
@@ -124,7 +124,7 @@ const Portfolio = () => {
                 </p>
                 <div className="flex justify-center my-4">
                   <Link
-                    to="/get-demo"
+                    // to="/get-demo"
                     className="text-white bg-blue-900 hover:bg-blue-800 inline-flex items-center justify-center w-full px-6 py-3 my-4 text-lg shadow-xl rounded-xl"
                   >
                     Banquets
