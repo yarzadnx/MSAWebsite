@@ -1,46 +1,24 @@
-import NavBar from "../components/Navbar/NavBar";
-import Footer from "../components/Footer";
-import { useDocTitle } from "../components/CustomHook";
+import React from "react";
+import { HashLink } from "react-router-hash-link";
 
-const Contact = () => {
-  useDocTitle("JMU MSA");
-
+const NavLinks = () => {
   return (
     <>
-      <NavBar />
-      <div
-        id="contact"
-        className="flex justify-center items-center mt-8 w-full bg-white py-12 lg:py-24 "
+      <HashLink
+        className="px-4 font-extrabold text-purple-500 hover:text-purple-900"
+        smooth
+        to="/#about"
       >
-        <div
-          className="container mx-auto my-8 px-4 lg:px-20"
-          data-aos="zoom-in"
-        >
-          <form name="contact" netlify>
-            <p>
-              <label>
-                Your Name: <input type="text" name="name" />
-              </label>
-            </p>
-            <p>
-              <label>
-                Your Email: <input type="email" name="email" />
-              </label>
-            </p>
-            <p>
-              <label>
-               Your Questions: <textarea name="Questions"></textarea>
-              </label>
-            </p>
-            <p>
-              <button type="submit">Send</button>
-            </p>
-          </form>
-        </div>
-      </div>
-      <Footer />
+        About
+      </HashLink>
+      <HashLink
+        className="px-4 font-extrabold text-purple-500 hover:text-purple-900"
+        to="/contact#contact"
+      >
+        Contact Us
+      </HashLink>
     </>
   );
 };
 
-export default Contact;
+export default NavLinks;
