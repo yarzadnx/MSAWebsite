@@ -1,6 +1,4 @@
 import React from "react";
-
-// Import your Instagram PNG image
 import instagramIcon from "../images/instagram.png";
 
 const Footer = () => {
@@ -49,6 +47,8 @@ const Footer = () => {
                 </ul>
               </div>
             </div>
+
+            {/* 3rd block */}
           </div>
 
           <div className="flex flex-wrap items-center md:justify-between justify-center mx-auto px-4">
