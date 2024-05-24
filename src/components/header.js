@@ -1,6 +1,6 @@
 import React from "react";
 import NavBar from "./Navbar/NavBar";
-import heroImg from "../images/msaLogo.svg";
+import heroImg from "../images/jmuMSANEW.svg";
 
 const Hero = () => {
   const redirectToGoogleDocs = () => {
@@ -38,7 +38,7 @@ const Hero = () => {
                   onClick={redirectToGoogleDocs}
                   className="text-white bg-purple-900 hover:bg-purple-800 inline-flex items-center justify-center w-full px-6 py-3 my-4 text-lg shadow-xl rounded-2xl sm:w-auto sm:mb-0"
                 >
-                  Calendar
+                  Find Our Next Event
                   <svg
                     className="w-4 h-4 ml-1"
                     xmlns="http://www.w3.org/2000/svg"
