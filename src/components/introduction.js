@@ -17,7 +17,7 @@ const Intro = () => {
             data-aos="zoom-in"
             data-aos-delay="500"
           >
-            <h3 className="text-3xl  text-purple-900 font-bold">
+            <h3 className="text-3xl  text-purple-900 font-bold ">
               Welcome to the James Madison University Muslim Student Association
               (JMU MSA)!
             </h3>
