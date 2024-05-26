@@ -7,33 +7,27 @@ import getDay from "date-fns/getDay";
 import enUS from "date-fns/locale/en-US";
 import "react-big-calendar/lib/css/react-big-calendar.css";
 import NavBar from "../components/Navbar/NavBar";
-
+import Footer from "../components/Footer";
 const locales = {
   "en-US": enUS,
 };
 
 const myEventsList = [
   {
-    start: new Date(2024, 5, 10),
-    end: new Date(2024, 5, 11),
+    start: new Date(2024, 4, 25),
+    end: new Date(2024, 4, 25),
     title: "test event",
     description: "This is a test description of an event",
   },
   {
-    start: new Date(2022, 3, 4),
-    end: new Date(2022, 3, 4),
-    title: "test event",
+    start: new Date(2024, 4, 10),
+    end: new Date(2024, 4, 10),
+    title: "Friday Prayer",
     description: "This is a test description of an event",
   },
   {
-    start: new Date(2022, 3, 4),
-    end: new Date(2022, 3, 4),
-    title: "test event",
-    description: "This is a test description of an event",
-  },
-  {
-    start: new Date(2022, 3, 4),
-    end: new Date(2022, 3, 6),
+    start: new Date(2024, 4, 6),
+    end: new Date(2024, 4, 6),
     title: "test event",
     description: "This is a test description of an event",
   },
@@ -52,15 +46,24 @@ const MyCalendar = (props) => (
     <div>
       <NavBar />
     </div>
-    <div>
+    <div style={{ marginTop: "75px" }}>
+      <hr
+        style={{
+          marginBottom: "50px",
+          height: "5px",
+          backgroundColor: "black",
+          border: "none",
+        }}
+      />
       <Calendar
         localizer={localizer}
         events={myEventsList}
         startAccessor="start"
         endAccessor="end"
-        style={{ height: 500 }}
+        style={{ height: 505, color: "purple" }}
       />
     </div>
+    <Footer />
   </>
 );
 
