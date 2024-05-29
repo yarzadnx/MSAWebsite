@@ -18,7 +18,7 @@ const MyCalendar = () => {
   const [selectedEvent, setSelectedEvent] = useState(null);
 
   useEffect(() => {
-    fetch("http://localhost:5000/events")
+    fetch("https://backendmsa-63ec40c9f736.herokuapp.com/events")
       .then((response) => response.json())
       .then((data) => {
         const formattedEvents = data.map((event) => ({

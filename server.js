@@ -13,6 +13,9 @@ const uri =
 const client = new MongoClient(uri, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
+  tls: true,
+  tlsAllowInvalidCertificates: false,
+  loggerLevel: "debug",
 });
 
 app.use(cors());
