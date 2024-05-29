@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Calendar, dateFnsLocalizer } from "react-big-calendar";
 import format from "date-fns/format";
 import parse from "date-fns/parse";
@@ -13,8 +13,23 @@ const locales = {
   "en-US": enUS,
 };
 
-const MyCalendar = (props) => {
+const MyCalendar = () => {
+  const [events, setEvents] = useState([]);
   const [selectedEvent, setSelectedEvent] = useState(null);
+
+  useEffect(() => {
+    fetch("http://localhost:5000/events")
+      .then((response) => response.json())
+      .then((data) => {
+        const formattedEvents = data.map((event) => ({
+          ...event,
+          start: new Date(event.start),
+          end: new Date(event.end),
+        }));
+        setEvents(formattedEvents);
+      })
+      .catch((error) => console.error("Error fetching events:", error));
+  }, []);
 
   const handleEventSelect = (event) => {
     setSelectedEvent(event);
@@ -23,30 +38,6 @@ const MyCalendar = (props) => {
   const handleModalClose = () => {
     setSelectedEvent(null);
   };
-
-  const myEventsList = [
-    {
-      start: new Date(2024, 4, 25),
-      end: new Date(2024, 4, 25),
-      title: "test event",
-      description: "This is a test description of an event",
-      time: "5:00 - 7:00",
-    },
-    {
-      start: new Date(2024, 4, 10),
-      end: new Date(2024, 4, 10),
-      title: "Friday Prayer",
-      description: "Jummah Prayer Hosted by JMU MSA",
-      time: "5:00 - 7:00",
-    },
-    {
-      start: new Date(2024, 4, 6),
-      end: new Date(2024, 4, 6),
-      title: "test event",
-      description: "This is a test description of an event",
-      time: "5:00 - 7:00",
-    },
-  ];
 
   const localizer = dateFnsLocalizer({
     format,
@@ -66,7 +57,7 @@ const MyCalendar = (props) => {
         <div style={{ height: "86vh" }}>
           <Calendar
             localizer={localizer}
-            events={myEventsList}
+            events={events}
             startAccessor="start"
             endAccessor="end"
             style={{ height: "100%", color: "purple" }}
@@ -82,7 +73,6 @@ const MyCalendar = (props) => {
               &times;
             </span>
             <h1 className="font-bold text-xl">{selectedEvent.title}</h1>
-
             <p>{selectedEvent.description}</p>
             <p>{selectedEvent.time}</p>
           </div>
