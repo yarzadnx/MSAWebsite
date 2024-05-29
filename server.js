@@ -15,7 +15,6 @@ const client = new MongoClient(uri, {
   useUnifiedTopology: true,
   tls: true,
   tlsAllowInvalidCertificates: false,
-  loggerLevel: "debug",
 });
 
 app.use(cors());
