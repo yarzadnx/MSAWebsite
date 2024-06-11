@@ -82,7 +82,7 @@ const Admin = () => {
               Start Date:
             </label>
             <input
-              type="datetime-local"
+              type="date"
               name="start"
               value={formData.start}
               onChange={handleChange}
@@ -95,7 +95,7 @@ const Admin = () => {
               End Date:
             </label>
             <input
-              type="datetime-local"
+              type="date"
               name="end"
               value={formData.end}
               onChange={handleChange}
@@ -108,7 +108,7 @@ const Admin = () => {
               Time:
             </label>
             <input
-              type="text"
+              type="time"
               name="time"
               value={formData.time}
               onChange={handleChange}
