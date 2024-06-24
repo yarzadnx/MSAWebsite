@@ -11,8 +11,8 @@ const Services = () => {
             className="flex flex-col-reverse lg:flex-row py-8 justify-between lg:text-left"
             data-aos="zoom-out"
           >
-            <div className="lg:w-1/2 flex flex-col lg:mx-4 justify-center">
-              <div className="text-purple-900 mb-4">
+            <div className="lg:w-1/2 flex flex-col lg:mx-4 justify-center ">
+              <div className="text-purple-900 mb-4 -mt-10">
                 <img
                   src={newImage}
                   alt="DuaPicture"
@@ -24,7 +24,6 @@ const Services = () => {
               <h3
                 className="text-3xl  text-purple-900 
                             font-bold"
-                Hello
               >
                 <span className="font-black">Dua of the Month</span>
               </h3>
@@ -39,7 +38,7 @@ const Services = () => {
                 </p>
               </div>
             </div>
-            <div className="lg:w-1/2 flex flex-col lg:mx-4 justify-center">
+            <div className="lg:w-1/2 flex flex-col lg:mx-4 justify-center ">
               <div className="text-purple-900 mb-4">
                 <img
                   src={newImage2}
