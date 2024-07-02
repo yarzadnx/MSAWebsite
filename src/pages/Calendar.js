@@ -46,6 +46,13 @@ const MyCalendar = () => {
     getDay,
     locales,
   });
+  function parseTime(dateTimeString) {
+    const dateTime = new Date(dateTimeString);
+    return `${dateTime.toLocaleTimeString([], {
+      hour: "2-digit",
+      minute: "2-digit",
+    })}`;
+  }
 
   return (
     <>
@@ -73,8 +80,14 @@ const MyCalendar = () => {
               &times;
             </span>
             <h1 className="font-bold text-xl">{selectedEvent.title}</h1>
+            <p>
+              <strong>Location:</strong> {selectedEvent.time}
+            </p>
+            <p>
+              <strong>Time:</strong> {parseTime(selectedEvent.start)} -{" "}
+              {parseTime(selectedEvent.end)}
+            </p>
             <p>{selectedEvent.description}</p>
-            <p>{selectedEvent.time}</p>
           </div>
         </div>
       )}
