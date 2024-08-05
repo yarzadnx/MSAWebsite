@@ -24,12 +24,13 @@ client
   .connect()
   .then(() => {
     const db = client.db("MSAEvents");
-    const collection = db.collection("Events");
+    const eventsCollection = db.collection("Events");
+    const emailsCollection = db.collection("Emails"); // New collection for emails
 
     app.post("/events", async (req, res) => {
       const event = req.body;
       try {
-        await collection.insertOne(event);
+        await eventsCollection.insertOne(event);
         res.status(201).send("Event added successfully");
       } catch (error) {
         console.error("Error adding event:", error);
@@ -39,11 +40,26 @@ client
 
     app.get("/events", async (req, res) => {
       try {
-        const events = await collection.find({}).toArray();
+        const events = await eventsCollection.find({}).toArray();
         res.status(200).json(events);
       } catch (error) {
         console.error("Error fetching events:", error);
         res.status(500).send("Error fetching events");
+      }
+    });
+
+    app.post("/emails", async (req, res) => {
+      const { email } = req.body;
+      if (email.endsWith("@dukes.jmu.edu")) {
+        try {
+          await emailsCollection.insertOne({ email });
+          res.status(201).send("Email added successfully");
+        } catch (error) {
+          console.error("Error adding email:", error);
+          res.status(500).send("Error adding email");
+        }
+      } else {
+        res.status(400).send("Invalid Dukes email address");
       }
     });
 
@@ -52,5 +68,3 @@ client
     });
   })
   .catch((error) => console.error("Error connecting to MongoDB:", error));
-
-//"mongodb+srv://naweed123:naweed123@cluster0.oiruxyt.mongodb.net/";

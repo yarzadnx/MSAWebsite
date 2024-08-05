@@ -5,6 +5,12 @@ const NavLinks = () => {
   return (
     <>
       <HashLink
+        className="px-4 font-extrabold text-purple-500 hover:text-purple-900 " // Added text-xl for larger font
+        to="/joinGroupMe#joinGroupMe"
+      >
+        Join New GroupMe!
+      </HashLink>
+      <HashLink
         className="px-4 font-extrabold text-purple-500 hover:text-purple-900"
         smooth
         to="/#about"
