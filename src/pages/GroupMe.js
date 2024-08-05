@@ -15,7 +15,7 @@ const JoinGroupMePage = () => {
     e.preventDefault();
     if (email.endsWith("@dukes.jmu.edu")) {
       try {
-        await axios.post("http://localhost:5000/emails", { email }); // Update with your server URL
+        await axios.post("/emails", { email }); // Update with your server URL
         setShowLink(true);
         setError("");
         setConfettiVisible(true); // Show confetti
@@ -26,7 +26,7 @@ const JoinGroupMePage = () => {
         }, 5200);
       } catch (error) {
         console.error("Error submitting email:", error);
-        setError("Error submitting email. Please try again.");
+        setError(error);
       }
     } else {
       setError("Invalid Dukes email address");
