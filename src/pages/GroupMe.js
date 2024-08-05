@@ -15,7 +15,6 @@ const JoinGroupMePage = () => {
     e.preventDefault();
     if (email.endsWith("@dukes.jmu.edu")) {
       try {
-        await axios.post("/emails", { email }); // Update with your server URL
         setShowLink(true);
         setError("");
         setConfettiVisible(true); // Show confetti
