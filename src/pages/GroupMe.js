@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import axios from "axios";
 import img from "./GroupMe.JPG";
 import Confetti from "react-confetti";
 
