@@ -18,13 +18,13 @@ const JoinGroupMePage = () => {
         setError("");
         setConfettiVisible(true); // Show confetti
 
-        // Hide confetti after 2 seconds
+        // Hide confetti after 5 seconds
         setTimeout(() => {
           setConfettiVisible(false);
         }, 5200);
       } catch (error) {
         console.error("Error submitting email:", error);
-        setError(error);
+        setError("An error occurred. Please try again.");
       }
     } else {
       setError("Invalid Dukes email address");
@@ -69,13 +69,42 @@ const JoinGroupMePage = () => {
             <p className="text-lg font-semibold text-gray-800">
               Welcome, Dukes!
             </p>
+            <div className="mt-4 bg-gray-100 p-4 rounded-lg shadow-sm">
+              <h2 className="text-xl font-semibold mb-2 text-gray-800">
+                GroupMe Guidelines
+              </h2>
+              <ul className="list-disc list-inside text-gray-700 space-y-2">
+                <li>
+                  <strong>Relevant Topics:</strong> Only discuss topics related
+                  to MSA activities and events.
+                </li>
+                <li>
+                  <strong>Respectful Communication:</strong> Avoid debates and
+                  arguments. Keep conversations respectful and on-topic.
+                </li>
+                <li>
+                  <strong>Islamic Questions:</strong> For Islamic-related
+                  questions, please contact our chaplain directly rather than
+                  using the chat.
+                </li>
+                <li>
+                  <strong>Rule Enforcement:</strong> If you deliberately break
+                  the rules, you will receive a warning for the first offense. A
+                  second deliberate breach will result in removal from the
+                  group.
+                </li>
+              </ul>
+            </div>
+            <p className="text-lg font-semibold text-gray-800 mt-4">
+              Ready to join the GroupMe Group?
+            </p>
             <a
               href={groupMeLink}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-purple-500 hover:text-purple-700"
+              className="text-purple-500 hover:text-purple-700 text-lg font-semibold"
             >
-              Join the GroupMe Group
+              Click here to join
             </a>
             <div className="mt-6">
               <img
