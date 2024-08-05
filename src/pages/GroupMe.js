@@ -66,9 +66,7 @@ const JoinGroupMePage = () => {
             {confettiVisible && (
               <Confetti width={window.innerWidth} height={window.innerHeight} />
             )}
-            <p className="text-lg font-semibold text-gray-800">
-              Welcome, Dukes!
-            </p>
+
             <div className="mt-4 bg-gray-100 p-4 rounded-lg shadow-sm">
               <h2 className="text-xl font-semibold mb-2 text-gray-800">
                 GroupMe Guidelines
